@@ -13,8 +13,8 @@ const Layout = () => {
     const [copyClicked, setCopyClicked] = useState<boolean>(false);
     const [copyText, setCopyText] = useState<string>("Copy URL");
     const [shareLabel, setShareLabel] = useState<string | undefined>("Share");
-    const [hideHistoryLabel, setHideHistoryLabel] = useState<string>("Hide chat history");
-    const [showHistoryLabel, setShowHistoryLabel] = useState<string>("Show chat history");
+    const [hideHistoryLabel, setHideHistoryLabel] = useState<string>("Cacher l'historique");
+    const [showHistoryLabel, setShowHistoryLabel] = useState<string>("Afficher l'historique");
     const appStateContext = useContext(AppStateContext)
     const ui = appStateContext?.state.frontendSettings?.ui;
 
@@ -49,12 +49,12 @@ const Layout = () => {
         const handleResize = () => {
           if (window.innerWidth < 480) {
             setShareLabel(undefined)
-            setHideHistoryLabel("Hide history")
-            setShowHistoryLabel("Show history")
+            setHideHistoryLabel("Cacher l'historique")
+            setShowHistoryLabel("Afficher l'historique")
           } else {
             setShareLabel("Share")
-            setHideHistoryLabel("Hide chat history")
-            setShowHistoryLabel("Show chat history")
+            setHideHistoryLabel("Cacher l'historique")
+            setShowHistoryLabel("Afficher l'historique")
           }
         };
     
@@ -70,7 +70,7 @@ const Layout = () => {
                 <Stack horizontal verticalAlign="center" horizontalAlign="space-between">
                     <Stack horizontal verticalAlign="center">
                         <img
-                            src={ui?.logo ? ui.logo : Contoso}
+                            src={ui?.logo ? ui.logo : Ressif AI}
                             className={styles.headerIcon}
                             aria-hidden="true"
                         />
