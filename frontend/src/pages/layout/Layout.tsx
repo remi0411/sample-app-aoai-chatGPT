@@ -70,7 +70,7 @@ const Layout = () => {
                 <Stack horizontal verticalAlign="center" horizontalAlign="space-between">
                     <Stack horizontal verticalAlign="center">
                         <img
-                            src={ui?.logo ? ui.logo : Ressif AI}
+                            src={ui?.logo ? ui.logo : 'Ressif AI'}
                             className={styles.headerIcon}
                             aria-hidden="true"
                         />
